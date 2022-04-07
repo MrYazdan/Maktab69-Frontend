@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: deepskyblue;
+    text-align: center;
+    font: 52px 'A EntezareZohoor B4'
+}
+
+#body {
+    background: lightcyan
+}
+
+.text-ored {
+    color: orangered !important;
+}
+
+.bg-yellow {
+    padding: 10px 0;
+    color: black;
+    background: yellow;
+}
+
+.box {
+    height: 50px;
+    display: block;
+    background: greenyellow;
+
+}
+
+/*.box:hover {*/
+.box:active {
+    margin-top: -15px;
+    opacity: 0.5;
+}
+
+.box:nth-of-type(2) {
+    background: orange;
+}
+
+.w-40 {
+    width: 40%;
+}
