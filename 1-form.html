@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #6F00F2;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        #main {
+            width: 75%;
+            background: #FFFFFF;
+            padding: 25px;
+            border: 10px solid #250055;
+            border-radius: 15px;
+            margin: 0 auto;
+        }
+
+        label, input, select, textarea, p {
+            display: block;
+            width: 100%;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            margin: 15px 0 5px 0;
+        }
+
+        #address::placeholder {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline !important;
+            padding: 5px 30px;
+            width: fit-content !important;
+            margin-top: 10px;
+            outline: none;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .btn:hover {
+            background: #ddd;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Register form</h1>
+        <p>Enter your profile</p>
+        <form action="">
+            <label for="fname">Firstname:</label>
+            <input type="text" tabindex="5" id="fname" name="fname" minlength="4" required>
+            <label for="phone">Phonenumber:</label>
+            <input type="tel" tabindex="4" id="phone" name="phone" required>
+            <label for="email">Email:</label>
+            <input tabindex="2" type="email" id="email" name="email">
+            <label for="gender">Gender:</label>
+            <select tabindex="3" name="gender" id="gender">
+                <option value="M" name="male">Male</option>
+                <option value="F" name="female">Female</option>
+            </select>
+            <label for="address">Address:</label>
+            <textarea tabindex="1" name="address" id="address" placeholder="Enter your address"></textarea>
+            <input class="btn" type="submit" value="Send">
+            <input class="btn" type="reset" value="Clear">
+        </form>
+    </div>
+</body>
+</html>
