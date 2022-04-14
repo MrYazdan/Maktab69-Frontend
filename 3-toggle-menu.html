@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 25px;
+        }
+
+        .main-menu {
+            position: fixed;
+            width: 320px;
+            left: -320px;
+            top: 0;
+            bottom: 0;
+        }
+
+        .main-menu > .menu {
+            opacity: 0.1;
+            width: 320px;
+            background: purple;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            color: white;
+            padding: 25px;
+        }
+
+        .main-menu::before {
+            content: 'X';
+            font-family: sans-serif;
+            position: absolute;
+            right: -30px;
+            border-radius: 30px;
+            background: purple;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .main-menu:hover > .menu {
+            opacity: 1;
+            left : 320px;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+
+    <div class="main-menu">
+        <div class="menu">
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem dolore hic laborum nisi pariatur quae reiciendis rem tempora voluptate. Animi ea eius facere maiores perferendis perspiciatis quibusdam, sit voluptatem.</p>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
