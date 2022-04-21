@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events Javascript</title>
+    <style>
+        #box, .box {
+            width: 300px;
+            height: 250px;
+            background: orangered;
+            border-radius: 5px;
+            margin: 60px auto;
+            color: white;
+            text-align: center;
+            line-height: 250px;
+            font-size: 56px;
+        }
+    </style>
+    <script>
+        // DOM -> Document object model
+        // BOM -> Browser object model
+
+        // Dom  ->
+        // 1. html --> document
+        // 2. model html tree
+    </script>
+</head>
+<body>
+    <form id="main">
+        <label for="number">Enter number : </label>
+        <input oninput="mathTable(this.value)" id="number" type="number" min="0" max="25">
+        <label for="fsize">Set font-size : </label>
+        <input oninput="setFontSize(this.value)" id="fsize" type="range" value="10" min="10" max="40">
+    </form>
+    <hr>
+    <pre class="main" style="text-align: center"></pre>
+<script>
+    function mathTable(n) {
+        let main = document.querySelectorAll('.main')[0]
+        main.innerHTML = ''
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                main.innerHTML += String(i*j) + "\t"
+            }
+            main.innerHTML+= "\n"
+            // br
+        }
+    }
+
+    function setFontSize(n) {
+        let main = document.querySelectorAll('.main')[0]
+        main.style.fontSize = `${n}px`
+    }
+</script>
+</body>
+</html>

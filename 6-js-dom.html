@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Javascript</title>
+    <style>
+        #box, .box {
+            width: 300px;
+            height: 250px;
+            background: orangered;
+            border-radius: 5px;
+            margin: 60px auto;
+            color: white;
+            text-align: center;
+            line-height: 250px;
+            font-size: 56px;
+        }
+    </style>
+    <script>
+        // DOM -> Document object model
+        // BOM -> Browser object model
+
+        // Dom  ->
+        // 1. html --> document
+        // 2. model html tree
+        // document.querySelectorAll('p')[0].innerText = "Ajab!!!"
+
+    </script>
+</head>
+<body onclick="document.body.innerHTML = 'Booom !!!'">
+        <!--    <div id="box">-->
+        <!--        jabe-->
+        <!--    </div>-->
+
+        <div id="main">
+
+        </div>
+
+        <p class="p-tag" title="Hello">
+            <a>This is p tag</a>
+        </p>
+<script>
+
+    // let box = document.getElementById('box')
+    // box.style.background = "cyan"
+
+    // let main = document.getElementById('main')
+    // main.innerHTML = '' // empty
+
+    // get number from user input
+    // let number = prompt('Enter your number')
+    //
+    // for (let i = 1; i < Number(number)+1; i++) {
+    //     let box = document.createElement('div')
+    //     box.setAttribute('class', 'box')
+    //     box.innerHTML = `Box ${i}`
+    //     main.append(box)
+    // }
+
+    // console.log(document.getElementsByTagName('p')[0].innerText = "Salam")
+
+    // let p_tag = document.querySelectorAll('p[title]')[0]
+    // p_tag.innerText = "In JS"
+    // document.body.removeChild(p_tag)\
+
+    // let p_tag = document.querySelectorAll('p.p-tag')[0]
+    // let name = prompt('Enter your name')
+    //
+    // p_tag.style.fontSize = '55px'
+    //
+    // let title = p_tag.getAttribute('title')
+    // p_tag.setAttribute('title', title + " " + name)
+</script>
+</body>
+</html>
