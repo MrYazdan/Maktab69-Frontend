@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alpin Hello</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+</head>
+<body x-data="{
+    name: '',
+    numbers: [1,2,3,4,5,6,7,8,8,7,5,4,3,3,2,1]
+}">
+<input type="text" x-model="name">
+<hr>
+<h1 x-text="name"></h1>
+<ul>
+    <template x-for="i in numbers">
+        <li x-text="i"></li>
+    </template>
+</ul>
+</body>
+</html>
