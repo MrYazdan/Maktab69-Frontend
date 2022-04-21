@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events Javascript</title>
+    <style>
+        #box, .box {
+            width: 300px;
+            height: 250px;
+            background: orangered;
+            border-radius: 5px;
+            margin: 60px auto;
+            color: white;
+            text-align: center;
+            line-height: 250px;
+            font-size: 56px;
+        }
+
+        #getter {
+            display: block;
+            width: 300px;
+            background: orangered;
+            border-radius: 5px;
+            margin: 60px auto;
+            color: white;
+            text-align: center;
+            font-size: 56px;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button type="button" id="getter"> Get Users </button>
+    <hr>
+    <div id="main" style="text-align: center"></div>
+<script>
+    let main = $('#main')
+    main.append($("<ul>"))
+    main = main.children("ul")
+
+    // main.children('input#number').val(5)
+    // main.children('input#number').on('input', function () {
+    //     $('.main').text('Changed to '+ this.value)
+    // })
+
+    $('#getter').click(function (){
+        $.get('https://jsonplaceholder.typicode.com/posts', function (data) {
+            for (let i in data) {
+                main.append(`<li><b>Post ${i}</b>: ${data[i].title}</li>`)
+            }
+        })
+    })
+</script>
+</body>
+</html>
