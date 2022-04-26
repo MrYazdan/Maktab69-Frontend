@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Javascript</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            font: 28px sans-serif;
+        }
+
+        body {
+            height: 20000px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            background: orangered;
+        }
+
+        .p-abs {
+            position: absolute;
+        }
+
+        .p-rel {
+            position: relative;
+        }
+
+        .p-sta {
+            position: static;
+        }
+
+        .p-sti {
+            position: sticky !important;
+        }
+
+        .p-fix {
+            position: fixed;
+        }
+
+    </style>
+</head>
+<body>
+<!--    هر المانی درون صفحه بخودیه خود پوزیشن استاتیک دارد ! -->
+<!--    Static  -->
+<div class="box p-sta"></div>
+<hr>
+<!--  Fixed  -->
+<div class="box p-fix" style="bottom: 0; right: 0"></div>
+<!--  sticky  -->
+<div class="box p-sti" style="top: 0; background: rgba(100,100,100,1); width: 100%"></div>
+<!--  relative  -->
+<div class="box p-rel" style="background: greenyellow; top:-100px;left:100px">
+    <!--  absolute  -->
+    <div class="box p-abs" style="background: purple;width: 50px;height: 50px;bottom: 50px;right: 0;left: 0;margin: auto;"></div>
+</div>
+</body>
+</html>

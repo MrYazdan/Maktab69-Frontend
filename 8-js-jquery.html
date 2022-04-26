@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Javascript</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @import url('https://v1.fontapi.ir/css/Thuluth');
+
+        @font-face {
+            font-family: 'IRSansB';
+            src: url("IRANSansWeb(FaNum)_Bold.woff");
+        }
+
+        #main {
+            direction: rtl;
+            /*font: 48px Thuluth, cursive;*/
+            font: 48px 'IRSansB', cursive;
+        }
+    </style>
+</head>
+<body>
+<button type="button" id="getter"> Get Users</button>
+<hr>
+<div id="main" style="text-align: center">
+    سلام خدمت تموم روزه داران و حضار محترم سال 1401!
+</div>
+<script>
+    $('#getter').click(function () {
+        $.ajax({
+            url: "https://jsonplaceholder.typicode.com/posts/1", method: "PUT",body:
+                JSON.stringify({
+                    id: 1,
+                    title: 'Hello',
+                    body: 'Test body for maktab 69',
+                    userId: 1,
+                })
+            , success: function (data) {
+                console.log(data)
+            }
+        });
+
+        $.ajax({
+            url : '',
+            method: 'POST',
+            body: {},
+            success: function(r){
+                // بلای مورد نظر
+            },
+            error: (err)=>{
+                // چاپ ارور من !
+            }
+        })
+
+    })
+
+    let urlParams = new URLSearchParams(window.location.search)
+    console.log(urlParams.getAll('name')); // ["edit"]
+    console.log(urlParams.toString()); // "?post=1234&action=edit"
+    console.log(urlParams.toString())
+</script>
+</body>
+</html>
